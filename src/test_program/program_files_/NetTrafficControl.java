@@ -1,5 +1,6 @@
-//Downloads a file of 1M from "http://ipv4.ikoula.testdebit.info/1M.iso"
-//to rate an Internet speed
+// Uploads a file of 1M on "http://ipv4.ikoula.testdebit.info/1M.iso"
+// to rate a current Internet speed.
+// According to result, the time delays across the test are re-calculated.
 
 package test_program.program_files_;
 
