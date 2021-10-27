@@ -26,22 +26,22 @@ public class ScreenShoter extends Thread implements Runnable {
 	public static void pageShot(final String pageTitle_, final int cnt2_) throws InvocationTargetException, InterruptedException {
 		
 		webDriver = Default_StartBrowser.webDriver;
-		vLinksFlg_Shoter = false;
-		
-			pageShoter = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+		vLinksFlg_Shoter = false;		
+		pageShoter = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 					.takeScreenshot(Default_StartBrowser.webDriver);
 
-			try {
-					ImageIO.write(pageShoter.getImage(), "png", new File(pathToFl + cnt2_ + ".png"));
-					System.out.println("::::::::::::::::::: Screenshot made was::: " + pathToFl + cnt2_ + ".png :::::::::::::::::::" );
-					TimeUnit.SECONDS.sleep((long)0.5);
-					vLinksFlg_Shoter = true;
-				} catch (IOException | InterruptedException ioe) {
-					System.out.println("<<<<< Screen shot failed on page " + pageTitle_ + ", session " + cnt2_ + " >>>>>");
-					vLinksFlg_Shoter = true;
-					ioe.printStackTrace();
-				} //eotry
-//		return pgShot;
+		try {
+			ImageIO.write(pageShoter.getImage(), "png", new File(pathToFl + cnt2_ + ".png"));
+			System.out.println("::::::::::::::::::: Screenshot made was::: " 
+			+ pathToFl + cnt2_ + ".png :::::::::::::::::::" ); // For console checking.
+			TimeUnit.SECONDS.sleep((long)0.5);
+			vLinksFlg_Shoter = true;
+		} catch (IOException | InterruptedException ioe) {
+			System.out.println("<<<<< Screen shot failed on page " 
+			+ pageTitle_ + ", session " + cnt2_ + " >>>>>"); // For console checking.
+			vLinksFlg_Shoter = true;
+			ioe.printStackTrace();
+		} //eotry
 	}// eomethod
 
 }//eoclass	
