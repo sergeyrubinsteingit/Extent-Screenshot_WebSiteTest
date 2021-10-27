@@ -1,4 +1,4 @@
-// Uploads a file of 1M on "http://ipv4.ikoula.testdebit.info/1M.iso"
+// Uploads a file of 1M "trafficTestFile/1M.iso" on "http://ipv4.ikoula.testdebit.info"
 // to rate a current Internet speed.
 // According to result, the time delays across the test are re-calculated.
 
