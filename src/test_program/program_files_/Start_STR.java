@@ -1,9 +1,9 @@
-//The string pageData_ is an array including a title and a URL
-//of the visited page. STR method checks the data is not empty
-//and sets theFlag boolean to true or false. According
-//to result the Extent Report test will be set as passed or failed. 
-//NetTrafficControl method downloads a file of 1MG to rate
-//the current Internet speed.
+// The string pageData_ is an array including a title and a URL
+// of the visited page. STR method checks if the data is not empty
+// and sets theFlag boolean to true or false. According
+// to result the Extent Report test will be set as passed or failed. 
+// NetTrafficControl method downloads a file of 1MG to rate
+// the current Internet speed.
 
 package test_program.program_files_;
 
