@@ -1,3 +1,9 @@
+// The VisitLinks.java class uses this class
+// to check if the page shot was done or attempted during 100 ms:
+// screen shot marks the end of the page testing.
+// The VisitLinks.java stops running till the page test is done
+// or attempted; then resumes the test on the next page.
+
 package test_program.program_files_;
 
 import java.io.File;
@@ -7,7 +13,6 @@ public class ShotIsDone_Check {
 	
 	public static boolean testFlag_;
 	public static int waitCounter = 0;
-	public static int testCnt_ = 0;
 	
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -20,12 +25,14 @@ public class ShotIsDone_Check {
 			
 			if (controlFl.exists()) {
 				testFlag_ = true;
+				// For console check:
 				System.out.println(
 						"--- ShotIsDone_Check.java ---\n((((((((((((((((((( File exists: " + controlFlPath + ")))))))))))))))))))");
 				break;
 			} else {
 				testFlag_ = false;
 				waitCounter++;
+				// For console check:
 				System.out.println(
 						"((((((((((((((((((( ShotIsDone_Check.java is running for " + waitCounter + " sec. )))))))))))))))))))");
 				System.out.println("((((((((((((((((((( currentTime => " + java.time.LocalTime.now()
