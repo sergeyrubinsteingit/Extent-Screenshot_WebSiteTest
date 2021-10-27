@@ -1,10 +1,13 @@
+// Reads browser names from the browsers_.txt file
+// Writes them into array list.
+// Converts array to string array, the latter to be used in combo box drop menu "Select a browser"
+
 package test_program.program_files_;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class MakeBrowsersList {
@@ -27,11 +30,9 @@ public class MakeBrowsersList {
 					brwsFlag = true;
 					String browserName = sourceReader.nextLine().toLowerCase();
 					browsersList (browserName);
-//					System.out.println(browserName);
 				}
 				
 				if (!sourceReader.hasNextLine()) {
-//					System.out.println("->-> " + browsersList.toString());
 					listStringArray(browsersList);
 					sourceReader.close();
 				}//eoif
@@ -39,11 +40,11 @@ public class MakeBrowsersList {
 		} catch (FileNotFoundException e) {
 			System.exit(-1);
 			e.printStackTrace();
-		}
+		}// eotry
 		
 	}// eomain
 	
-	public static ArrayList<String> browsersList (String browserName_){
+	public static ArrayList<String> browsersList (String browserName_){ // Arranges drop menu's entries.
 		
 		if (browserName_.contains("irefox") || browserName_.contains("fire")) {
 			browserName_ = "Firefox";
@@ -62,7 +63,6 @@ public class MakeBrowsersList {
 		}//eoif
 			
 		browsersList.add(browserName_);
-//		System.out.println("->>=>>=> " + browsersList.toString());
 		return browsersList;
 		} // eometh
 	
@@ -71,7 +71,7 @@ public class MakeBrowsersList {
 		for (int i = 0; i < browsersList_.size(); i++) {
 			listStringArray [i] = browsersList_.get(i);
 		}
-		System.out.println("####>>>>> " + Arrays.toString(listStringArray));
+		System.out.println("####>>>>> " + Arrays.toString(listStringArray)); // Console's check.
 		return listStringArray ;		
 	}//eometh
 
