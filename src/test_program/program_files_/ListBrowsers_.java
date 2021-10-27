@@ -1,10 +1,10 @@
-package test_program.program_files_;
-
-import java.io.File;
 // Runs a batch on the machine to list browsers installed there. 
 // Writes a list of them into .txt file to be used as a source for creating a drop menu in Combo Box.
 // If exists, deletes a former .txt to avoid mismatches.
 
+package test_program.program_files_;
+
+import java.io.File;
 import java.io.IOException;
 import java.lang.ProcessBuilder.Redirect;
 import java.util.concurrent.TimeUnit;
