@@ -1,3 +1,6 @@
+// Creates HTML log file in test_program/logFile/ScreenShotsRep.html as a base to write screenshots in.
+// First, deletes the former one to avoid mix-up.
+
 package test_program.program_files_;
 
 import java.io.File;
