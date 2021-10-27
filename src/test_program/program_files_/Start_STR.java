@@ -1,7 +1,9 @@
-// The string pageData_ is an array including a title and a URL
+// This class checks if the tested page/element looks/acts as expected.
+// In this case the string pageData_ contains an array with a title and a URL
 // of the visited page. STR method checks if the data is not empty
-// and sets theFlag boolean to true or false. According
-// to result the Extent Report test will be set as passed or failed. 
+// and sets theFlag boolean accordingly to true or false.
+// Depending on result in the Extent Report the test will be marked as passed or failed. 
+// RunTestNG.runTestNg() method fires Extent Report. 
 // NetTrafficControl method downloads a file of 1MG to rate
 // the current Internet speed.
 
