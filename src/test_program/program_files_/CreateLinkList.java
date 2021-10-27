@@ -1,6 +1,6 @@
-//Builds a list of links from the drop menu.
-//Cleans the list of nulls and passes the
-//output to VisitLinks class
+// Builds a list of links from the site navigation bar's drop menu.
+// Links list comes with a number of "null" entries.
+// Cleans the list of nulls and passes the output to VisitLinks class.
 
 package test_program.program_files_;
 
