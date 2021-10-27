@@ -1,3 +1,10 @@
+// At the end of the test or on aborting it by tester,
+// stops the test running on system without closing the browser.
+// Calls AddShotsToHTML class to write screenshots made while testing
+// into /logFile/ScreenShotsRep.html file.
+// Opens /logFile/ExtentRepLog.html file and/logFile/ScreenShotsRep.html file
+// in the two new tabs in browser along with the tested site tab.
+
 package test_program.program_files_;
 
 import java.io.File;
@@ -15,7 +22,6 @@ import test_program.Default_StartBrowser;
 public class QuitTest {
 	
 	public static WebDriver webDriver;
-//	final static WaitWindow_ wWin_ = new WaitWindow_();
 
 	public static void quitTest() throws IOException, InterruptedException {
 		
@@ -25,12 +31,10 @@ public class QuitTest {
 		final WaitWindow_ wWin_ = new WaitWindow_();
 		wWin_.dispose();
 		webDriver.manage().timeouts().implicitlyWait( (int) Math.round(NetTrafficControl.rateToInterval * 1 ), TimeUnit.SECONDS);
-//			TimeUnit.SECONDS.sleep((long) 0.5);
 		AddShotsToHTML.main(null);
 		System.out.println("<<<<<< The test is finished >>>>>>");
 		
 	// Opens HTML log files in the new tabs
-		
 		ArrayList<String> logFileNames = new ArrayList<>();
 		File logFileDir = new File(System.getProperty("user.dir") + "\\src\\test_program\\logFile\\");
 		
@@ -48,7 +52,6 @@ public class QuitTest {
 				webDriver.switchTo().window(tabsList.get(i+1));
 				webDriver.navigate().to(System.getProperty("user.dir") + "\\src\\test_program\\logFile\\" + logFileNames.get(i).toString());
 			}//eofor
-		//			webDriver.quit();
 		System.exit(0);
 		} //eofMethQuitTest
 			
