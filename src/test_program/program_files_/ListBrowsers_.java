@@ -1,6 +1,6 @@
 // Runs a batch on the machine to list browsers installed there. 
 // Writes a list of them into .txt file to be used as a source for creating a drop menu in Combo Box.
-// If exists, deletes a former .txt to avoid mismatches.
+// If exists, deletes a former .txt to avoid mix-ups.
 
 package test_program.program_files_;
 
