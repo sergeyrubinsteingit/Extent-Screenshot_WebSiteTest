@@ -55,4 +55,4 @@ public class QuitTest {
 		System.exit(0);
 		} //eofMethQuitTest
 			
-}
+} //eoclass
