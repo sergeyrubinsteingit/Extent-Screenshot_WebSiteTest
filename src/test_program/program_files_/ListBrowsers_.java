@@ -1,6 +1,10 @@
 package test_program.program_files_;
 
 import java.io.File;
+// Runs a batch on the machine to list browsers installed there. 
+// Writes a list of them into .txt file to be used as a source for creating a drop menu in Combo Box.
+// If exists, deletes a former .txt to avoid mismatches.
+
 import java.io.IOException;
 import java.lang.ProcessBuilder.Redirect;
 import java.util.concurrent.TimeUnit;
@@ -10,7 +14,7 @@ public class ListBrowsers_ {
 	public static String pathToDir = System.getProperty("user.dir") + "\\src\\test_program\\ListBrowsers\\";
 	
 	public static void renewLogFile() {
-//		String browsLogDir = System.getProperty("user.dir") + "\\src\\test_program\\program_files_\\ListBrowsers\\";
+		
 		File browsLogFile = new File(pathToDir + "browsers_.txt");
 		
 			try {
@@ -31,12 +35,10 @@ public class ListBrowsers_ {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
-		renewLogFile();//Recreates a file for browsers log
+		renewLogFile(); //Recreates a file for browsers log
 		
 		String [] batchNm = {"browsers_list.bat", "brows_Lst_.bat"} ;
-		
-//		ProcessBuilder proBld = new ProcessBuilder("C:\\Users\\user\\eclipse-workspace\\Lesson11_ExtendReports\\"
-//				+ "extReportExr\\src\\com\\new_Version\\ListBrowsers\\" + batchNm[0],"firstArg","secondArg");
+
 		ProcessBuilder proBld = new ProcessBuilder(pathToDir + batchNm[0]);
 		proBld.directory(new File(pathToDir));
 		File browsLog = new File(pathToDir + "browsers_.txt");
