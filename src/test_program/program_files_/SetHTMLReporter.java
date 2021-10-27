@@ -52,9 +52,7 @@ public class SetHTMLReporter {
 		extnHTMLreporter.config().setJS("js-string");
 		extnHTMLreporter.config().setProtocol(Protocol.HTTPS);
 				
-		//To add system or environment info by using the setSystemInfo method.
-		//extnReports.setSystemInfo("OS", OS);
-		//extnReports.setSystemInfo("Browser", setBrowser);        
+		//To add system or environment info by using the setSystemInfo method.       
 		extnReports.setSystemInfo("OS", "Windows");
 		extnReports.setSystemInfo("Browser", "Firefox");
 		
