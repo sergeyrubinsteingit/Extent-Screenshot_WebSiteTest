@@ -1,7 +1,7 @@
 //Opens GUI window. This window's target is to explain
 //to user the pause on the screen while a test is running
 //on the background. Shows up testing time passed, in seconds.
-//The window is equipped with button canceling the process 
+//The window has a button to abort the process 
 // while exiting the system
 
 package test_program.program_files_;
@@ -44,7 +44,7 @@ public class WaitWindow_ extends JFrame {
     wLabel.setPreferredSize(new Dimension(300,180));
     
     WaitButton wButton = new WaitButton();
-    wButton.setText("Stop the testing process");
+    wButton.setText("Double-click to stop the test");
 //    wButton.addMouseListener((MouseListener) wButton);
     
     WaitPanel wPanel = new WaitPanel();
