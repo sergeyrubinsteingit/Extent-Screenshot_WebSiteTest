@@ -45,7 +45,6 @@ public class WaitWindow_ extends JFrame {
     
     WaitButton wButton = new WaitButton();
     wButton.setText("Double-click to stop the test");
-//    wButton.addMouseListener((MouseListener) wButton);
     
     WaitPanel wPanel = new WaitPanel();
     wPanel.add(wLabel, BorderLayout.NORTH);
