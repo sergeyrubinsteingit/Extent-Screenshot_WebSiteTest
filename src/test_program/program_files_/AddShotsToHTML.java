@@ -1,4 +1,7 @@
-//Writes screen shot images into HTML file
+// Deletes former ScreenShotsRep.html file in screen_shots directory.
+// Creates a new one.
+// While creating it, writes screen shot images into ScreenShotsRep.html file.
+
 package test_program.program_files_;
 
 import java.io.BufferedWriter;
