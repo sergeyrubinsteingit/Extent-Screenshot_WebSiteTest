@@ -1,7 +1,8 @@
-//This class opens all the links
-//present in drop menu of the site.
-//After opening the page it runs on it the
-//Start_STR class preparatory for testing.
+//This class visits all the links
+//present in drop menus of the navigation bar of the site.
+//After opening the page it runs in it the
+//Start_STR class which checks if the elements tested
+// looks or acts as expected.
 
 package test_program.program_files_;
 
