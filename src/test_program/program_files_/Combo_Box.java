@@ -1,6 +1,5 @@
-//Builds a combobox window to let
-//the user a choice between browsers
-//to test the site on.
+//Builds a combobox window to let the user choose a browser to run test on.
+// Uses a newly created test_program/ListBrowsers/browsers_.txt as a source.
 
 package test_program.program_files_;
 
