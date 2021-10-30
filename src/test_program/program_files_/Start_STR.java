@@ -12,6 +12,7 @@ package test_program.program_files_;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 
 import test_program.Default_StartBrowser;
 
@@ -19,7 +20,7 @@ import test_program.Default_StartBrowser;
 public class Start_STR extends Thread {
 	
 	static Object syncObject = VisitLinks.class;
-	private static  int cnt2 = 0;
+	private static  int strs_count = 0;
 	public static boolean theFlag = false;
 	public static String testStatus;
 	public static String [] getPageData;
@@ -28,7 +29,7 @@ public class Start_STR extends Thread {
 	public static void STR(final String [] pageData_) throws IOException, InterruptedException {
 		getPageData = pageData_;
 		WebDriver webDriver = Default_StartBrowser.webDriver;
-		if (pageData_.length == 0 || cnt2 == 1 || cnt2 == 5) {
+		if (pageData_.length == 0 || (strs_count%3 != 0 && strs_count < 12)) {
 				theFlag = false;
 				webDriver.manage().timeouts().implicitlyWait( (int) Math.round(NetTrafficControl.rateToInterval * 1 ), TimeUnit.SECONDS); // A pause to fill the list
 				testStatus = "<::: FAILED :::>\n No page was found";
@@ -41,13 +42,13 @@ public class Start_STR extends Thread {
 		// A pause to fill the list
 			webDriver.manage().timeouts().implicitlyWait( (int) Math.round(NetTrafficControl.rateToInterval * 1 ), TimeUnit.SECONDS);
 			TimeUnit.SECONDS.sleep(1);
-			cnt2++;
+			strs_count++;
 		
 		////////////////////////////////  NetTrafficControl  ////////////////////////////////////
 		// * Fires a method checking current traffic
 		// * and setting timeout accordingly.
 				
-		if (cnt2%2 == 0) { 
+		if (strs_count%2 == 0) { 
 			try {
 				NetTrafficControl.CheckTraffic.CheckTrafficRun();
 			} catch (InterruptedException e1) {
