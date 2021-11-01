@@ -7,3 +7,4 @@ Main class to start the program at: /src/test_program/Default_StartBrowser.java
 6.  Following the Extent Report, a screenshot of the page is performed.
 7.  At the end of the testing process, or on its aborting by the tester, Extent Report and screen shots are represented in two HTML files.
 8.  The files are displayed in two additional tabs in the same window where the tes run.
+9.  Duration of intervals in the testing process is regulated by checking Internet speed and changing the timeouts accordingly.
